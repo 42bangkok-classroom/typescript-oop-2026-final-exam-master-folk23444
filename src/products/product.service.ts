@@ -8,7 +8,7 @@ import { Product } from './product.interface';
 export class ProductService {
     
     findAll(): Product[] {
-        const filePath = path.join(process.cwd(), 'data', 'product.json');
+        const filePath = path.join(process.cwd(), 'data', 'products.json');
         const data = fs.readFileSync(filePath, 'utf-8');
         return JSON.parse(data) as Product[];
 }
