@@ -5,9 +5,11 @@ import { ProductController } from './product.controller';
 
 @Injectable()
 export class ProductService {
+    
     findAll(){
     const filePath = path.join(process.cwd(), 'data', 'products.json');
     const data = fs.readFileSync(filePath, 'utf-8');
-    return JSON.parse(data)
+    const user = JSON.parse(data);
+    return user
     }
 }
